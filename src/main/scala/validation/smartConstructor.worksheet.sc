@@ -10,5 +10,6 @@ object Coordinates {
     else None
 }
 
+
 Coordinates.fromValues(1.0, 2.0) // Some(Coordinates(1.0, 2.0))
 Coordinates.fromValues(1.0, 200.0) // None
