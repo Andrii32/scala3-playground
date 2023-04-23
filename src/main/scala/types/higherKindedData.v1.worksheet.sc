@@ -10,12 +10,10 @@ class FMetadated
 class FValidated
 class FRaw
 
-
 type Field[A, T] = A match
-  case FRaw        => Option[T]
-  case FMetadated  => WithMetadata[Option[T]]
-  case FCollected  => Vector[WithMetadata[Option[T]]]
-
+  case FRaw       => Option[T]
+  case FMetadated => WithMetadata[Option[T]]
+  case FCollected => Vector[WithMetadata[Option[T]]]
 
 case class CompanyFields[T](
     name:      Field[T, String],

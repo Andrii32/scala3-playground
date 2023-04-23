@@ -23,7 +23,7 @@ type Field[A, N, T] = A match
 case class CompanyFields[A](
     name:      Field[A, "name", String],
     founded:   Field[A, "founded", Int],
-    employees: Field[A, "employees", Vector[String]],
+    employees: Field[A, "employees", Vector[String]]
 )
 
 val schema = CompanyFields[FSchema](Named(), Named(), Named())
@@ -31,6 +31,5 @@ val schema = CompanyFields[FSchema](Named(), Named(), Named())
 println(schema.name.fName)
 println(schema.founded.fName)
 println(schema.employees.fName)
-
 
 // ====================

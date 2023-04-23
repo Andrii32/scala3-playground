@@ -120,8 +120,8 @@ def myDeepDropEmptyValues(x: Json): Json = {
   val folder = new Json.Folder[Json] {
     def onNull: Json = Json.Null
     def onBoolean(value: Boolean): Json = Json.fromBoolean(value)
-    def onNumber(value: JsonNumber): Json = Json.fromJsonNumber(value)
-    def onString(value: String): Json = Json.fromString(value)
+    def onNumber(value:  JsonNumber): Json = Json.fromJsonNumber(value)
+    def onString(value:  String): Json = Json.fromString(value)
     def onArray(value: Vector[Json]): Json =
       Json.fromValues(value.collect { case v =>
         v.foldWith(this)
@@ -155,8 +155,8 @@ extension (json: Json)
     val folder = new Json.Folder[Json] {
       def onNull: Json = Json.Null
       def onBoolean(value: Boolean): Json = Json.fromBoolean(value)
-      def onNumber(value: JsonNumber): Json = Json.fromJsonNumber(value)
-      def onString(value: String): Json = Json.fromString(value)
+      def onNumber(value:  JsonNumber): Json = Json.fromJsonNumber(value)
+      def onString(value:  String): Json = Json.fromString(value)
       def onArray(value: Vector[Json]): Json =
         Json.fromValues(value.collect { case v =>
           v.foldWith(this)
