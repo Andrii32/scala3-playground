@@ -1,4 +1,4 @@
-// Scala literla types https://docs.scala-lang.org/sips/42.type.html
+// Scala literal types https://docs.scala-lang.org/sips/42.type.html
 
 val x: 42 = 42
 
